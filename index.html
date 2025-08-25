@@ -305,7 +305,7 @@
                     }
                 }
                 explode() {
-                    const PARTICLES_COUNT = window.innerWidth <= 600 ? 40 : 60;
+                    const PARTICLES_COUNT = window.innerWidth <= 600 ? 30 : 60;
                     for (let i = 0; i < PARTICLES_COUNT; i++) {
                         this.particles.push(new Particle(this.x, this.y, this.color));
                     }
@@ -369,7 +369,7 @@
                     span.style.fontSize = (20 + Math.random() * 8) + "px";
                     lluviaContainer.appendChild(span);
                     setTimeout(() => { if (lluviaContainer.contains(span)) lluviaContainer.removeChild(span) }, duracion);
-                }, 200);
+                }, 80);
             };
 
             const detenerLluvia = () => {
@@ -386,7 +386,7 @@
                             contadorFechaDiv.textContent = numeros[index];
                             contadorFechaDiv.style.animation = 'pop 0.8s ease forwards';
                             index++;
-                            setTimeout(mostrar, 3000);
+                            setTimeout(mostrar, 2000);
                         } else {
                             resolve();
                         }
